@@ -1,0 +1,32 @@
+python -m venv vdjango // mkvirtualenv nombre_entorno
+source vdjango/bin/activate.fish //en virtualenv no es necesario
+pip install django
+pip install --upgrade pip
+django-admin startproject nombre_proyecto
+cd nombre_proyecto -->entrar a la carpeta del proyecto
+python manage.py startapp holaMundoApp --> crear app
+en settings.py   -->habilitar la app recién creada
+    INSTALLED_APPS = [
+        "holaMundoApp",
+        ...
+    ]
+ir a la app, views.py. Crear funciones en el view
+    importar lo que haya que importar y generar método
+
+            from django.http import HttpResponse
+
+            # Create your views here.
+
+            def hola(request):
+                return HttpResponse("Hola Mundo!!")
+agregar ruta en urls.py de la app principal (carpeta con el nombre del proyecto)
+    from holaMundoApp import views  ---->importar los métodos de la app
+    --from holaMundoApp.views import hola (otra forma)
+
+    urlpatterns = [
+        path('admin/', admin.site.urls),
+        path('', views.hola, name='hola'), --->método hola
+        --path ('', hola, name='hola') --> otra forma de llamar al método hola, con importación directa
+    ]
+ejecutar el servidor
+    python manage.py runserver

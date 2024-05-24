@@ -1,0 +1,107 @@
+Paso 0: Terminal-> Revisar si tenemos todo instalado.  (pip -V // python -V) LAS INSTALACIONES SON UNA SOLA VEZ
+python -V
+    Python 3.12.1
+
+pip -V
+    pip 24.0 
+
+pip list (VER LAS DEPENDENCIAS INSTALADAS GLOBALMENTE -> (EN TODO EL PC))
+        Package            Version
+        ------------------ -----------
+        certifi            2024.2.2   
+        charset-normalizer 3.3.2      
+        idna               3.6        
+        numpy              1.26.4     
+        pandas             2.2.1      
+        pip                24.0       
+        python-dateutil    2.9.0.post0
+        pytz               2024.1     
+        requests           2.31.0
+        six                1.16.0
+        tzdata             2024.1
+        urllib3            2.2.1
+
+pip install django (INSTALAR DJANGO GLOBALMENTE)
+    instala: 
+        asgiref
+        sqlparse
+        django
+
+1. Etapa 1: Preparación del entorno virtual e instalación de dependencias.
+● 1.1: Habilitamos un entorno virtual con Python:
+    ○ Ubica un directorio del computador para alojar los proyectos.
+    ○ Abre este directorio en la consola de comandos y ejecuta la siguiente instrucción.
+
+python -m venv vdjango
+
+➔ python -m venv => Da la instrucción de creación de un entorno virtual, venv significa Virtual Envioronment
+conda create --name nombre_entorno
+mkvirtualenv nombre_entorno
+➔ vdjango => Es el nombre del entorno virtual
+
+1.2: En la carpeta generada vdjango, veremos un subdirectorio llamado Scripts.
+    Scripts contiene un archivo llamado activate, el cual nos servirá para ACTIVAR EL ENTORNO Virtual que creamos. 
+    Esto lo lograremos con el comando
+.\vdjango\Scripts\activate (no me funciona con la powershell)
+call vdjango\Scripts\activate (cmd) (tampoco me funcionó)
+
+source vdjango/Scripts/activate (terminal git bash) (esta si funcionó)
+
+1.3 desactivar el entorno virtual
+    deactivate 
+
+2. Etapa 2: Creación del proyecto
+2.1 Listar dependencias EN EL ENTORNO VIRTUAL
+    pip list
+
+2.2 Instalar django
+    pip install django
+    pip list
+
+        Package  Version
+        -------- -------
+        asgiref  3.8.1
+        Django   5.0.6
+        pip      24.0
+        sqlparse 0.5.0
+        tzdata   2024.1
+
+    pip install django==3.2.4 --> instalar una version específica de una dependencia en un entorno
+    pip freeze > requirements-(nombre).txt --> generar un archivo requirements.txt 
+    pip install -r requirements.txt --> instalar todas las dependencias especificadas en el archivo dentro de un entorno virtual
+
+    pip --help -->listar todas las funcionalidades disponibles de pip
+    
+2.3 Creación del proyecto
+    django-admin startproject myFirstProject --> comando de creación y nombre del proyecto
+    - crea una carpeta con el mismo nombre del proyecto (app)
+    - un manage.py
+
+3. Etapa 3: Desplegar nuestro proyecto
+    3.1 acceder a la carpeta del proyecto
+        cd myFirstProject 
+
+    CREACIÓN DE APLICACIONES
+        python manage.py startapp nombre_app -->formato de creación
+        python manage.py startapp login
+
+    VINCULAR UNA APLICACIÓN
+        En el archivo settings.py:
+            INSTALLED_APPS = [...
+            "nombre_app"
+            ]
+
+    3.2 ejecutar el proyecto   --> desplegar en un servidor, visible por browser
+        python manage.py runserver
+
+
+ENTORNOS VIRTUALES
+        deactivate — Salir del entorno virtual Python actual
+        workon — Listar los entornos virtuales disponibles
+        workon name_of_environment — Activar el entorno virtual Python especificado
+        rmvirtualenv name_of_environment — Borrar el entorno especificado.
+
+        mkvirtualenv --> generar un entorno virtual
+
+
+

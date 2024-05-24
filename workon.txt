@@ -1,0 +1,10 @@
+C:\Bootcamp Python\G7-0044-1\DJANGO>workon
+
+Pass a name to activate one of the following virtualenvs:
+==============================================================================
+calendariolunar
+ferreteria
+laesquina
+onlyflans
+prestobar
+taller

@@ -1,0 +1,41 @@
+Crearemos un entorno virtual llamado “mi-proyecto-django” (utilizaremos
+Anaconda...o no).
+● (conda create --name) mkvirtualenv mi-proyecto-django
+
+Una vez dentro del entorno instalaremos Django.
+● pip install django
+
+Una vez instalado Django nos posicionamos en la carpeta que queremos trabajar y ejecutamos el siguiente comando:
+● django-admin startproject mysite
+El cual creará la carpeta principal del proyecto y dentro de ella 1 archivo y 1 carpeta
+
+● manage.py: Archivo que permite ejecutar
+comandos de django.
+● mysite/: Carpeta principal del proyecto.
+        ● __init__.py: Permite que la carpeta en que se
+        encuentre este archivo se utilice como un módulo
+        de python.
+        ● settings.py: Alberga las configuraciones generales
+        del proyecto.
+        ● urls.py: Lista las rutas principales de nuestro
+        proyecto.
+        ● asgi.py & wsgi.py: La interfaz de puerta de enlace
+        de servidor web.
+
+
+cd mysite --> entrar a la carpeta del proyecto
+
+Finalmente ejecutamos el comando que
+creará la carpeta de la aplicación polls.
+● python manage.py startapp pollsApp
+
+        ● __init__.py: Mismo que la anterior.
+        ● admin.py: Alberga las configuraciones del
+        administrador de django.
+        ● apps.py: Guarda la configuración de la aplicacón.
+        ● migrations: Carpeta contenedora de las
+        migraciones de la app.
+        ● models.py: Contiene los modelos de la app.
+        ● test.py: Gestiona los test de la app.
+        ● views.py: Lista las vistas (la lógica) de la app
+

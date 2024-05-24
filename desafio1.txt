@@ -1,0 +1,41 @@
+deactivate — Salir del entorno virtual Python actual
+workon — Listar los entornos virtuales disponibles
+workon name_of_environment — Activar el entorno virtual Python especificado
+rmvirtualenv name_of_environment — Borrar el entorno especificado.
+
+Deberás crear 5 entornos virtuales distintos con los siguientes nombres:
+    1. ferretería
+        mkvirtualenv ferreteria
+    2. laesquina
+        mkvirtualenv laesquina
+    3. onlyflans
+        mkvirtualenv onlyflans
+    4. prestobar
+        mkvirtualenv prestobar
+    5. taller
+        mkvirtualenv taller
+
+Debe instalar las siguientes dependencias en cada uno de los entornos virtuales antes
+nombrados:
+    ● django 3.2
+
+Para cada entorno virtual deberás instalar las siguientes dependencias:
+    ● Para el entorno de ferreteria:
+        ○ django 3.2.4
+        pip install django==3.2.4
+    ● Para el entorno de laesquina:
+        ○ django en la última versión menor a 3
+        pip install django<3
+    ● Para el entorno onlyflans
+        ○ django 3.2
+        pip install django==3.2
+    ● Para el entorno prestobar
+        ○ astral en su última versión disponible
+        pip install django==3.2
+        pip install astral
+    ● Para el entorno de taller
+        ○ pytz en su versión 2019.3
+        pip install django==3.2
+        pip install pytz==2019.3
+
+pip freeze > requirements-(nombre).txt
