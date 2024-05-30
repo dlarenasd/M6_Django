@@ -103,5 +103,14 @@ ENTORNOS VIRTUALES
 
         mkvirtualenv --> generar un entorno virtual
 
+TENIENDO MÁS DE UNA APLICACIÓN
+	en URLS se pueden llamar con:
+	from . import views --> esto llama TODOS los views de las distintas aplicaciones
+	sin importar una por una
 
+
+python3 manage.py makemigrations
+python3 manage.py migrate   
+
+python3 manage.py createsuperuser
 

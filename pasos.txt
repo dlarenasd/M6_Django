@@ -30,3 +30,4 @@ agregar ruta en urls.py de la app principal (carpeta con el nombre del proyecto)
     ]
 ejecutar el servidor
     python manage.py runserver
+
