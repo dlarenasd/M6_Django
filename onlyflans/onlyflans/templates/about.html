@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{%load static %}
+{%block 'contenido'%}
+<div class="container text-center py-3">    
+    <h2>Acerca de Nosotros</h2>
+    <div class="row py-3 gx-3 gy-3">
+        <div class="col-sm-12 col-md-5">
+            <img src={% static 'img/flanes-familia.jpg' %} alt="foto-familia" class="img-fluid" id="foto-familiar">
+        </div>
+        <div class="col-sm-12 col-md-7 py-3 px-3 texto">
+            <p class="fs-sm-5 fs-md-6">
+                OnlyFlans es una empresa enfocada en el mundo de la pastelería y los postres, en especial
+            en la venta de flan(de ahí su nombre), nace en 2021 en Santiago de Chile como una empresa
+            familiar que pretende entregar productos de calidad a su clientela, estando ubicada en
+            Providencia, a pasos del metro Parque Bustamante.
+            </p>
+            <p class="fs-sm-5 fs-md-6">
+                Nuestro flan no es solo un postre; es una obra maestra. Cada porción es como un bocado de cielo: suave, sedoso y con ese toque casero que solo una familia puede ofrecer. ¿Qué hace especial a nuestros flanes? La respuesta está en la receta secreta que ha pasado de generación en generación. La leche condensada, la vainilla y el caramelo se combinan en una sinfonía de sabores que te transportará a momentos felices.
+            </p>
+            <p class="fs-sm-5 fs-md-6">
+                Así que, querido visitante, te invitamos a OnlyFlans. Ven a probar nuestros flanes, a sumergirte en la magia de lo casero y a crear tus propios recuerdos. Porque aquí, más que clientes, tenemos amigos y familia. ¡Te esperamos con los brazos abiertos y un flan recién salido del horno!</p>
+        </div>
+    </div>
+</div>
+{%endblock%}

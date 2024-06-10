@@ -1,3 +1,68 @@
-.list-group{
-    --bs-list-group-bg: #f7de72;
+body {
+    background-image: url('/static/img/floral-watercolor.jpg');
+}
+
+.navbar {
+    background: #ace2e1;
+    border-radius: 5px;
+}
+
+/*#header img {
+    width: 23em;
+}*/
+
+.btn-info {
+    background-color: #ace2e1;
+}
+
+.card {
+    width: 21em;
+    box-shadow:0px 0px 3px 0px #b77a47;
+}
+
+.card-body {
+    background-color: #fff6d5;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.list-group-item {
+    background-color: #fff6d5; 
+}
+
+#foto-familiar{
+    box-shadow:0px 0px 3px 0px #b77a47;
+    border-radius: 15px;
+}
+
+.texto {
+    background-color: #fff6d5;
+    box-shadow:0px 0px 3px 0px #b77a47;
+    border-radius: 15px;
+}
+
+.cuadro_texto {
+    /*width: 41em;*/
+    margin-top: 2em;
+    padding: 2em 0em;
+    background-color: #fff6d5;
+    border-radius: 15px;
+    box-shadow:0px 0px 3px 0px #b77a47;
+}
+
+.cuadro_formulario {
+    /*width: 35em;*/
+    margin-top: 2em;
+    padding: 2em 0em;
+    background-color: #fff6d5;
+    border-radius: 15px;
+    box-shadow:0px 0px 3px 0px #b77a47;
+}
+
+#footer {
+    background: #7ac4c3; 
+    color: white; 
+    text-align: center;
 }
