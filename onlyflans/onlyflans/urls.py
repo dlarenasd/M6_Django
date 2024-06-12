@@ -23,13 +23,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name='indice'),
     path('acerca/', about, name='acerca'),
-    path('accounts/login/bienvenido/', welcome, name='bienvenido'),
+    path('bienvenido/', welcome, name='bienvenido'),
     path('base', base, name='base'),
     #path('login/', login, name='login'),
     path('contacto/', contacto, name='contacto'),
     path('contacto/exito/', exito, name='exito'),
     path('registro/', registro, name='registro'),
-    path('accounts/', include('django.contrib.auth.urls')),
     path('masterflan/', masterflan, name='masterflan'),
+    path('accounts/', include('django.contrib.auth.urls')),
+
 ]
 
